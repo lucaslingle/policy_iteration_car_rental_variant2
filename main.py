@@ -171,13 +171,6 @@ class JacksCarRental:
         :return: expected franchise profit for the next timestep,
                  given the state and action at this timestep.
         """
-        expected_revenue = self.compute_expected_franchise_revenue(state, action)
-
-        storage_cost_store_0 = 4.0 if state[0] > 10 else 0.0
-        storage_cost_store_1 = 4.0 if state[1] > 10 else 0.0
-        storage_cost = storage_cost_store_0 + storage_cost_store_1 
-        # storage costs are paid upon arriving at a state where there are more than 10 cars at location.
-        # we assume the cost must be paid separately by each store if both exceed 10 cars, but this is not explicitly stated.
 
         if action > 0:
             # moving cars from store 0 to store 1, we get one free move thanks to the employee living near the second store.
@@ -185,8 +178,13 @@ class JacksCarRental:
         else:
             mvmt_cost = self.mvmt_cost_multiple * math.fabs(action)
 
+        storage_cost_store_0 = 4.0 if state[0]-action > 10 else 0.0
+        storage_cost_store_1 = 4.0 if state[1]+action > 10 else 0.0
+        storage_cost = storage_cost_store_0 + storage_cost_store_1
+
         total_cost = storage_cost + mvmt_cost
 
+        expected_revenue = self.compute_expected_franchise_revenue(state, action)
         expected_profit = expected_revenue - total_cost
         return expected_profit
 
