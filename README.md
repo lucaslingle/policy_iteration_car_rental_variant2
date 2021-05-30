@@ -9,4 +9,4 @@ Here are the final value estimates after four policy improvement iterations:
 Here is the final policy produced after four policy improvement iterations:
 ![policy](assets/policy_final.png)
 
-In the figures above, the value estimates range from 429 to 600 and the policy ranges from -5 to 5.
+In the figures above, the value estimates range from 429 to 603 and the policy ranges from -5 to 5.
