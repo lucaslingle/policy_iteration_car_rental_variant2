@@ -23,4 +23,4 @@ This makes sense, since this variant of the problem penalizes having more than 1
 Likewise, we can see that for 14 cars at store 0, we should move at least 4 of them to store 1, if store 1 has between 0 and 6 cars.
 
 The vertical line in the middle, towards the bottom half of the grid, says to move zero cars from store 0 to store 1, if there are 11 or more cars at store 0 and 10 cars at store 1.
-This can be explained partly by the fact that moving cars at the end of the day would lead to a penalty for both stores if more than 10 were stored overnight. 
+This can be explained partly by the fact that moving cars at the end of the day would lead to a penalty for both stores if more than 10 were stored overnight at both stores.
