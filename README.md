@@ -40,4 +40,7 @@ It can be explained by the fact that no more than 20 cars can be at a store, and
 and hence the policy must choose between the other valid options instead. This explains the discontinuity. 
 
 Finally, the light green horizontal bars on the right-hand side can also be explained by similar logic. They exist to help avoid store 0 avoid paying the penalty 
-it would otherwise incur for only transferring one car (as done in the surrounding green basin). To avoid the penalty, more cars are moved. The slightly darker green bar, with vertical coordinate 12, moves 2 cars right up until there are 19 or 20 cars at store 1, in which case moving 2 cars is an invalid action. Likewise, the lighter green bar applies when there are 13 cars at store 0, and it moves 3. This is a valid action right up until store 1 has 19, 19, or 20 cars, which explains why the light green bar stops earlier than the darker green one. 
+it would otherwise incur for only transferring one car (as done in the surrounding green basin). To avoid the penalty, more cars are moved. The slightly darker green bar, 
+with vertical coordinate 12, moves 2 cars right up until there are 19 or 20 cars at store 1, in which case moving 2 cars is an invalid action. 
+Likewise, the lighter green bar applies when there are 13 cars at store 0, and it moves 3. This is a valid action right up until store 1 has 18, 19, or 20 cars, 
+which explains why the light green bar stops earlier than the darker green one. 
