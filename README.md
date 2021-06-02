@@ -38,3 +38,6 @@ This allows store 0 to avoid a penalty for overnight storage of its cars, which 
 The square below the blue line says to move one car from store 0 to store 1. This is quite a jump from the blue line, which says to do the exact opposite.
 It can be explained by the fact that no more than 20 cars can be at a store, and hence transferring a car from store 1 to store 0 is not a valid action in this case, 
 and hence the policy must choose between the other valid options instead. This explains the discontinuity. 
+
+Finally, the light green horizontal bars on the right-hand side can also be explained by similar logic. They exist to help avoid store 0 avoid paying the penalty 
+it would otherwise incur for only transferring one car (as done in the surrounding green basin). To avoid the penalty, more cars are moved. The slightly darker green bar, with vertical coordinate 12, moves 2 cars right up until there are 19 or 20 cars at store 1, in which case moving 2 cars is an invalid action. Likewise, the lighter green bar applies when there are 13 cars at store 0, and it moves 3. This is a valid action right up until store 1 has 19, 19, or 20 cars, which explains why the light green bar stops earlier than the darker green one. 
