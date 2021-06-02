@@ -29,4 +29,4 @@ Our implementation assumes the penalties are paid separately by both stores to s
 
 However, if there are 11 cars at store 0, and 10 at store 1, the policy indicates to move one car to store 1. 
 This makes sense since the surrounding area is also green, and moving one car would likely be optimal here if not for the penalty. 
-Since the penalty would be paid either way, with 11/10 and 10/11, the policy moves one car.
+Since exactly one penalty would be paid either way, with 11/10 and 10/11, the policy moves one car.
