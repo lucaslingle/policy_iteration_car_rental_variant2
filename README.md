@@ -30,3 +30,11 @@ Our implementation assumes the penalties are paid separately by both stores to s
 However, if there are 11 cars at store 0, and 10 at store 1, the policy indicates to move one car to store 1. 
 This makes sense since the surrounding area is also green, and moving one car would likely be optimal here if not for the penalty. 
 Since exactly one penalty would be paid either way, with 11/10 and 10/11, the policy proceeds in moving one car.
+
+The blue bar immediately to the right of the vertical bar discussed before, also has a partial interpretation. It says to move -1 cars from store 0 to store 1. 
+In other words, transfer a car from store 1, with 11 cars, to store 0, if store 0 has between 13 and 19 cars. 
+This allows store 0 to avoid a penalty for overnight storage of its cars, which would otherwise exceed 10.
+
+The square below the blue line says to move one car from store 0 to store 1. This is quite a jump from the blue line, which says to do the exact opposite.
+It can be explained by the fact that no more than 20 cars can be at a store, and hence transferring a car from store 1 to store 0 is not a valid action in this case, 
+and hence the policy must choose between the other valid options instead. This explains the discontinuity. 
